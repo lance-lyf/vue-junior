@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <style>
+        .inner {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .outer {
+            background-color: deeppink;
+            width: 200px;
+            height: 200px;
+            display: block;  
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+       <!-- 没有任何系统修饰符被按下时才触发 -->
+       <input type="text" v-on:click="submit">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#demo",
+            data: {
+              
+            },
+            methods: {
+                submit: function(number){
+                   alert(1);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
